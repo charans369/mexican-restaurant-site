@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡El Fuego Caliente!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F8F8;
+        }
+        .text-shadow-custom {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Hero Section -->
+    <header class="relative bg-cover bg-center h-screen" style="background-image: url('https://placehold.co/1920x1080/4B2B1B/F4E3C4?text=Mexican+Restaurant+Front+View');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <nav class="absolute top-0 left-0 right-0 p-6 flex justify-between items-center z-10">
+            <h1 class="text-4xl font-extrabold text-white text-shadow-custom tracking-wide">¡El Fuego Caliente!</h1>
+            <div class="space-x-4 hidden md:flex">
+                <a href="#menu" class="text-white hover:text-orange-400 transition duration-300 font-semibold">Menu</a>
+                <a href="#about" class="text-white hover:text-orange-400 transition duration-300 font-semibold">About Us</a>
+                <a href="#contact" class="text-white hover:text-orange-400 transition duration-300 font-semibold">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-black bg-opacity-90 z-20 flex flex-col items-center justify-center space-y-8">
+            <button id="close-mobile-menu" class="absolute top-6 right-6 text-white focus:outline-none">
+                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <a href="#menu" class="text-white text-4xl font-bold hover:text-orange-400 transition duration-300">Menu</a>
+            <a href="#about" class="text-white text-4xl font-bold hover:text-orange-400 transition duration-300">About Us</a>
+            <a href="#contact" class="text-white text-4xl font-bold hover:text-orange-400 transition duration-300">Contact</a>
+        </div>
+
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white z-0">
+            <h2 class="text-5xl md:text-7xl font-bold mb-4 animate-pulse">Taste the Tradition</h2>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl px-4">Authentic Mexican cuisine made with fresh, high-quality ingredients. Come and experience a fiesta of flavors!</p>
+            <a href="#menu" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">View Menu</a>
+        </div>
+    </header>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-orange-600 mb-12">Our Menu</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Burritos -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden p-6 hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Burritos</h3>
+                    <img src="https://placehold.co/600x400/D4A017/000000?text=Delicious+Burrito" alt="Burrito" class="rounded-lg mb-4">
+                    <p class="text-gray-600 mb-2">A large flour tortilla wrapped around a filling of your choice, rice, beans, and salsa.</p>
+                    <span class="text-lg font-bold text-orange-500">$12.99</span>
+                </div>
+                <!-- Tacos -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden p-6 hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Tacos</h3>
+                    <img src="https://placehold.co/600x400/D4A017/000000?text=Savory+Tacos" alt="Tacos" class="rounded-lg mb-4">
+                    <p class="text-gray-600 mb-2">Three soft corn tortillas filled with your choice of meat, topped with onions and cilantro.</p>
+                    <span class="text-lg font-bold text-orange-500">$9.99</span>
+                </div>
+                <!-- Quesadillas -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden p-6 hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Quesadillas</h3>
+                    <img src="https://placehold.co/600x400/D4A017/000000?text=Cheesy+Quesadilla" alt="Quesadilla" class="rounded-lg mb-4">
+                    <p class="text-gray-600 mb-2">A folded tortilla filled with melted cheese and your favorite ingredients, grilled to perfection.</p>
+                    <span class="text-lg font-bold text-orange-500">$10.99</span>
+                </div>
+                <!-- Enchiladas -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden p-6 hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Enchiladas</h3>
+                    <img src="https://placehold.co/600x400/D4A017/000000?text=Delicious+Enchiladas" alt="Enchiladas" class="rounded-lg mb-4">
+                    <p class="text-gray-600 mb-2">Corn tortillas rolled around a filling and covered with a savory chili sauce.</p>
+                    <span class="text-lg font-bold text-orange-500">$14.50</span>
+                </div>
+                <!-- Fajitas -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden p-6 hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Fajitas</h3>
+                    <img src="https://placehold.co/600x400/D4A017/000000?text=Sizzling+Fajitas" alt="Fajitas" class="rounded-lg mb-4">
+                    <p class="text-gray-600 mb-2">Sizzling strips of grilled chicken or steak with onions and bell peppers, served with tortillas.</p>
+                    <span class="text-lg font-bold text-orange-500">$16.99</span>
+                </div>
+                <!-- Guacamole & Chips -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden p-6 hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Guacamole & Chips</h3>
+                    <img src="https://placehold.co/600x400/D4A017/000000?text=Fresh+Guacamole" alt="Guacamole" class="rounded-lg mb-4">
+                    <p class="text-gray-600 mb-2">Freshly made guacamole with ripe avocados, tomatoes, onions, and lime juice. Served with crispy tortilla chips.</p>
+                    <span class="text-lg font-bold text-orange-500">$7.50</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-orange-600 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">About Us</h2>
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/FFD700/000000?text=Restaurant+Interior" alt="Restaurant Interior" class="rounded-lg shadow-lg">
+                </div>
+                <div class="md:w-1/2 text-center md:text-left">
+                    <p class="text-lg mb-4">¡El Fuego Caliente! was founded on a passion for authentic Mexican cuisine and a desire to share it with our community. Our family recipes have been passed down for generations, ensuring every dish is a true taste of Mexico.</p>
+                    <p class="text-lg mb-4">We use only the freshest, locally sourced ingredients to create vibrant and flavorful meals. From our sizzling fajitas to our homemade salsa, every bite is a celebration of flavor and tradition.</p>
+                    <p class="text-lg">Come and join us for a meal, a laugh, and a true taste of Mexican hospitality. We can't wait to serve you!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-orange-500">Find Us</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-12">
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl font-semibold mb-2">Location</h3>
+                    <p class="text-lg mb-4">123 Fiesta Lane<br>Taco Town, TX 78901</p>
+                    <h3 class="text-2xl font-semibold mb-2">Hours</h3>
+                    <p class="text-lg">
+                        Monday - Thursday: 11 AM - 9 PM<br>
+                        Friday - Saturday: 11 AM - 10 PM<br>
+                        Sunday: 12 PM - 8 PM
+                    </p>
+                </div>
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl font-semibold mb-2">Contact</h3>
+                    <p class="text-lg">
+                        Phone: (555) 123-4567<br>
+                        Email: info@elfuegocaliente.com
+                    </p>
+                    <div class="mt-4 flex justify-center md:justify-start space-x-4">
+                        <a href="#" class="text-white hover:text-gray-400 transition-colors duration-300">
+                            <!-- Facebook Icon SVG -->
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.77-1.63 1.563V12h2.774l-.44 2.89h-2.334v6.987C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white hover:text-gray-400 transition-colors duration-300">
+                            <!-- Instagram Icon SVG -->
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.705.01 3.67.054 1.157.067 1.8.25 2.228.41.428.16.797.373 1.15.727.354.353.567.722.727 1.15.16.428.343 1.07.41 2.228.044.965.054 1.24.054 3.67S22.01 15.685 22.054 16.65c.067 1.157.25 1.8.41 2.228.16.428.373.797.727 1.15.353.354.722.567 1.15.727.428.16 1.07.343 2.228.41.965.044 1.24.054 3.67.054s2.705-.01 3.67-.054c1.157-.067 1.8-.25 2.228-.41a4.99 4.99 0 00-.727-1.15c-.353-.354-.722-.567-1.15-.727-.428-.16-1.07-.343-2.228-.41-.965-.044-1.24-.054-3.67-.054s-2.705.01-3.67.054c-1.157.067-1.8.25-2.228.41a4.99 4.99 0 00-1.15.727c-.354.353-.722.567-1.15.727-.16.428-.343 1.07-.41 2.228-.044.965-.054 1.24-.054 3.67zM12 21.603a9.603 9.603 0 100-19.206 9.603 9.603 0 000 19.206zM12 6a6 6 0 100 12 6 6 0 000-12z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-6 text-center">
+        <p>&copy; 2024 ¡El Fuego Caliente!. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.remove('hidden');
+            });
+
+            closeMobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+
+            // Hide menu when a link is clicked
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
